@@ -8,10 +8,7 @@
       <div class="footer__content">
         <div class="footer__column-1">
           <img class="footer__logo" src="@/assets/images/Logo-footer.png" alt="">
-          <p class="footer__title">هب دیناوتیم مویله رد .تسا شناد و ملع هنیمز رد ورشیپ دارفا رکف و اه هدیا یرازگ کارتشا
-            یارب
-            یرتسب مویله
-            .دیشاب هتشاد یشقن شناد و ملع جیورت رد زین دوخ و دیشاب هتشاد یسرتسد روشک رد یملع تالاقم نیرتدیدج</p>
+          <p class="footer__title">هلیوم بستری برای اشتراک گزاری ایده ها و فکر افراد پیشرو در زمینه علم و دانش است. در هلیوم میتوانید به جدیدترین مقالات غلمی در کشور دسترسی داشته باشید و خود نیز در ترویج غلم و دانش نقشی داشته باشید.</p>
         </div>
         <div class="footer__column-2">
           <ul class="footer__link-items">
@@ -80,7 +77,7 @@
 }
 
 .footer__title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 28px;
   text-align: right;

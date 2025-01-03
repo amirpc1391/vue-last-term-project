@@ -67,6 +67,7 @@ import {Navigation} from 'swiper/modules';
 .slider {
   width: 100%;
   height: 100%;
+  background-color: #000;
 }
 
 .swiper-slide {
@@ -78,7 +79,12 @@ import {Navigation} from 'swiper/modules';
   align-items: center;
   position: relative;
 }
-
+.swiper-pagination-bullet-active{
+  background-color: #fff !important;
+}
+.swiper-button-next,.swiper-button-prev{
+  color: white;
+}
 .slider__box {
   position: absolute;
   color: white;
