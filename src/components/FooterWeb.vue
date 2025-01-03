@@ -1,0 +1,115 @@
+<script setup>
+
+</script>
+
+<template>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__column-1">
+          <img class="footer__logo" src="@/assets/images/Logo-footer.png" alt="">
+          <p class="footer__title">هب دیناوتیم مویله رد .تسا شناد و ملع هنیمز رد ورشیپ دارفا رکف و اه هدیا یرازگ کارتشا
+            یارب
+            یرتسب مویله
+            .دیشاب هتشاد یشقن شناد و ملع جیورت رد زین دوخ و دیشاب هتشاد یسرتسد روشک رد یملع تالاقم نیرتدیدج</p>
+        </div>
+        <div class="footer__column-2">
+          <ul class="footer__link-items">
+            <li class="footer__link-item">بنویسید</li>
+            <li class="footer__link-item">راهنما</li>
+            <li class="footer__link-item">معرفی به دوستان</li>
+            <li class="footer__link-item">قوانین</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<style scoped>
+
+.footer {
+  width: 100%;
+  position: relative;
+  background-color: #232F3D;
+  border-radius: 10px 10px 0 0;
+}
+
+.footer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("src/assets/images/Pattern.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 50%;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 52%);
+  z-index: 1;
+}
+
+.footer__container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+.footer__content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 130px;
+}
+
+.footer__column-1 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer__logo {
+}
+
+.footer__title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: right;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #FFFFFF;
+}
+
+.footer__column-2 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__link-items {
+  width: 430px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.footer__link-item {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: right;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+</style>

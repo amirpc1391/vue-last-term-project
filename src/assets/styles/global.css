@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KalamehWeb';
+    src: url('../fonts/KalamehWeb-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+html {
+    font-family: "KalamehWeb", serif;
+    --color_fafbfc: #fafbfc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    background-color:var(--color_fafbfc);
+    min-height: 100vh;
+}
+#app{
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.panel {
+    width: 478px;
+    padding: 51px 59px 51px 59px;
+    border-radius: 12px;
+    background-color: #FAFBFC;
+    box-shadow: 0 8px 16px 0 #20304026;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+.panel__title{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #243447;
+}
+
+/*helper classes*/
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
