@@ -5,10 +5,11 @@ defineProps({
     default: 'primary'
   }
 })
+
 </script>
 
 <template>
-  <button :class="['button-group',{[`button-group--variant-${variant}`]:true}]">
+  <button :class="['button-group',{[`button-group--variant-${variant}`]:true}]" @click="$emit('clickBtn')">
     <slot></slot>
   </button>
 </template>

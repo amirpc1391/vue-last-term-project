@@ -2,6 +2,7 @@
 
 import Btn from "@/components/Btn.vue";
 import InputGroup from "@/components/InputGroup.vue";
+import router from "@/router/index.js";
 </script>
 
 <template>
@@ -17,7 +18,7 @@ import InputGroup from "@/components/InputGroup.vue";
                  variant="secondary"></input-group>
     <input-group title="رمز عبور" placeholder="رمز عبور خود را وارد کنید" typeOfInput="password"
                  variant="primary"></input-group>
-    <btn variant="secondary">ادامه</btn>
+    <btn variant="secondary" @clickBtn="()=>router.push('/')">ادامه</btn>
   </div>
 </template>
 

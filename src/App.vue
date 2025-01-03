@@ -8,9 +8,9 @@ import AuthView from "@/views/AuthView.vue";
 
 <template>
 
-<home-view></home-view>
+<!--<home-view></home-view>-->
 <!--<auth-view></auth-view>-->
-
+<RouterView></RouterView>
 </template>
 
 <style scoped>

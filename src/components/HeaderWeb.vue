@@ -1,5 +1,6 @@
 <script setup>
 import Btn from "@/components/Btn.vue";
+import router from "@/router";
 defineProps({
   isActiveLeftSection: {
     type: Boolean,
@@ -18,7 +19,7 @@ defineProps({
        </div>
        <div v-if="isActiveLeftSection" class="header__left-section">
          <img class="header__search-icon" src="../assets/images/Group%20287.png" alt="">
-         <btn variant="primary">ورود / ثبت نام</btn>
+         <btn variant="primary" @clickBtn="()=>router.push('/auth')">ورود / ثبت نام</btn>
        </div>
      </div>
     </div>

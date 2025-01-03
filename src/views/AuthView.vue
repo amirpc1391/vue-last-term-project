@@ -10,7 +10,7 @@ import LoginAuth from "@/components/AuthComponents/LoginAuth.vue";
 <template>
   <header-web :isActiveLeftSection="false"></header-web>
   <main class="main">
-      <SignupAuth></SignupAuth>
+      <RouterView></RouterView>
   </main>
   <footer-web></footer-web>
 </template>

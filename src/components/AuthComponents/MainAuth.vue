@@ -2,6 +2,7 @@
 
 import Btn from "@/components/Btn.vue";
 import InputGroup from "@/components/InputGroup.vue";
+import router from "@/router/index.js";
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import InputGroup from "@/components/InputGroup.vue";
     <h1 class="panel__title">ورود / ثبت نام</h1>
     <input-group title="لطفا شماره تلفن همراه خود را وارد کنید." placeholder="۰۹۱۵۱۲۳۴۵۶۷" typeOfInput="text"
                  variant="secondary"></input-group>
-    <btn variant="secondary">ادامه</btn>
+    <btn @clickBtn="()=>router.push('/auth/signup')" variant="secondary">ادامه</btn>
   </div>
 </template>
 

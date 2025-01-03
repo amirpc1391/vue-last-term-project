@@ -12,7 +12,6 @@ import Blog from "@/components/HomeComponents/Blog.vue";
   <main class="main">
     <Slider/>
     <div class="container">
-
       <div class="blog-vertical-section">
         <Blog is-vertical></Blog>
         <Blog is-vertical></Blog>
