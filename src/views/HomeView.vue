@@ -8,8 +8,11 @@ import Blog from "@/components/HomeComponents/Blog.vue";
 
 <template>
   <header-web isActiveLeftSection></header-web>
+
   <main class="main">
+    <Slider/>
     <div class="container">
+
       <div class="blog-vertical-section">
         <Blog is-vertical></Blog>
         <Blog is-vertical></Blog>

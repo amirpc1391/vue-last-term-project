@@ -1,8 +1,8 @@
 <script setup>
 defineProps({
-  isVertical:{
-    type:Boolean,
-    default:false
+  isVertical: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -42,10 +42,12 @@ defineProps({
   align-items: center;
   gap: 24px;
 }
-.blog--horizontal{
+
+.blog--horizontal {
   max-width: 100%;
   width: 100%;
 }
+
 .blog__section-right {
 
 }
@@ -153,7 +155,7 @@ defineProps({
   width: 3px;
   height: 3px;
   background-color: #8593A6;
-border-radius: 100px;
+  border-radius: 100px;
 }
 
 .blog__technology {

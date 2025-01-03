@@ -15,10 +15,10 @@
         </div>
         <div class="footer__column-2">
           <ul class="footer__link-items">
-            <li class="footer__link-item">بنویسید</li>
-            <li class="footer__link-item">راهنما</li>
-            <li class="footer__link-item">معرفی به دوستان</li>
-            <li class="footer__link-item">قوانین</li>
+            <li class="footer__link-item"><a href="#">بنویسید</a></li>
+            <li class="footer__link-item"><a href="#">راهنما</a></li>
+            <li class="footer__link-item"><a href="#">معرفی به دوستان</a></li>
+            <li class="footer__link-item"><a href="#">قوانین</a></li>
           </ul>
         </div>
       </div>
@@ -63,6 +63,8 @@
   justify-content: space-between;
   align-items: stretch;
   min-height: 130px;
+  position: relative;
+  z-index: 99;
 }
 
 .footer__column-1 {

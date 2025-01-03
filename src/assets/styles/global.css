@@ -64,6 +64,7 @@
 html {
     font-family: "KalamehWeb", serif;
     --color_fafbfc: #fafbfc;
+    --color_243447: #243447;
 }
 
 * {
@@ -74,19 +75,22 @@ html {
 }
 
 body {
-    background-color:var(--color_fafbfc);
+    background-color: var(--color_fafbfc);
     min-height: 100vh;
 }
-#app{
+
+#app {
     min-height: inherit;
     display: flex;
     flex-direction: column;
 }
+
 .container {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
+
 .main {
     flex-grow: 1;
     display: flex;
@@ -94,11 +98,12 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
 .panel {
     width: 478px;
     padding: 51px 59px 51px 59px;
     border-radius: 12px;
-    background-color: #FAFBFC;
+    background-color: var(--color_fafbfc);
     box-shadow: 0 8px 16px 0 #20304026;
     display: flex;
     flex-direction: column;
@@ -106,14 +111,20 @@ body {
     justify-content: center;
     gap: 60px;
 }
-.panel__title{
+
+.panel__title {
     font-size: 20px;
     font-weight: 700;
     line-height: 40px;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: #243447;
+    color: var(--color_243447);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*helper classes*/
