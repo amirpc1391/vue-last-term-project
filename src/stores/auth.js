@@ -5,7 +5,7 @@ export const useAuthStore = defineStore( 'auth' , () =>
 {
     const phone = ref( '' )
     const password = ref( '' )
-    const iranianPhoneRegex = "/^09\d{9}$/";
+    const iranianPhoneRegex = /^09\d{9}$/;
     const isAuth = ref( false )
 
     const users = reactive( {
@@ -13,11 +13,11 @@ export const useAuthStore = defineStore( 'auth' , () =>
     } );
 
     function validationPhone() {
-        return iranianPhoneRegex.test( phone )
+        return iranianPhoneRegex.test( phone.value )
     }
 
     function checkPhoneExists() {
-        return phone in users;
+        return phone.value in users;
     }
 
     function reset() {
