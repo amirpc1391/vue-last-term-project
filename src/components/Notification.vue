@@ -44,6 +44,7 @@ defineProps({
   opacity: 0;
   transition: all .2s ease-in-out;
   padding: .6rem;
+  z-index: 999;
 }
 
 .notification-section--active {
@@ -53,7 +54,7 @@ defineProps({
 
 .notification-section__content {
   width: 100%;
-  color: #dee2e6;
+  color: var(--color_dee2e6);
   border-radius: 8px;
   padding: 1rem;
   line-height: 1.4;

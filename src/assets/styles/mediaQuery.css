@@ -8,7 +8,8 @@
     .container {
         max-width: 960px;
     }
-    :root{
+
+    :root {
         font-size: 14px;
     }
 }
@@ -18,12 +19,10 @@
         max-width: 720px;
         grid-template-columns: repeat(3, 1fr);
     }
-    :root{
+
+    :root {
         font-size: 12px;
     }
-    /*.report-section{*/
-    /*    grid-template-columns: repeat(2, 1fr) !important;*/
-    /*}*/
 }
 
 @media (max-width: 768px) {
@@ -31,22 +30,18 @@
         max-width: 540px;
         grid-template-columns: repeat(2, 1fr);
     }
-    :root{
+
+    :root {
         font-size: 10px;
     }
-    /*.report-section{*/
-    /*    grid-template-columns: repeat(2, 1fr) !important;*/
-    /*}*/
 }
 
 @media (max-width: 576px) {
     .container {
         max-width: 100%;
     }
-    :root{
+
+    :root {
         font-size: 8px;
     }
-    /*.report-section{*/
-    /*    grid-template-columns: repeat(1, 1fr) !important;*/
-    /*}*/
 }

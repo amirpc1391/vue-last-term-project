@@ -8,7 +8,9 @@
       <div class="footer__content">
         <div class="footer__column-1">
           <img class="footer__logo" src="@/assets/images/Logo-footer.png" alt="">
-          <p class="footer__title">هلیوم بستری برای اشتراک گزاری ایده ها و فکر افراد پیشرو در زمینه علم و دانش است. در هلیوم میتوانید به جدیدترین مقالات غلمی در کشور دسترسی داشته باشید و خود نیز در ترویج غلم و دانش نقشی داشته باشید.</p>
+          <p class="footer__title">هلیوم بستری برای اشتراک گزاری ایده ها و فکر افراد پیشرو در زمینه علم و دانش است. در
+            هلیوم میتوانید به جدیدترین مقالات غلمی در کشور دسترسی داشته باشید و خود نیز در ترویج غلم و دانش نقشی داشته
+            باشید.</p>
         </div>
         <div class="footer__column-2">
           <ul class="footer__link-items">
@@ -28,7 +30,7 @@
 .footer {
   width: 100%;
   position: relative;
-  background-color: #232F3D;
+  background-color: var(--color_232F3D);
   border-radius: 10px 10px 0 0;
 }
 
@@ -37,12 +39,14 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  //width: 100%;
+  //height: 100%;
   background-image: url("src/assets/images/Pattern.svg");
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 50%;
+  //background-size: cover;
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 52%);
   z-index: 1;
 }
@@ -83,7 +87,7 @@
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #FFFFFF;
+  color: var(--color_white);
 }
 
 .footer__column-2 {
@@ -99,7 +103,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: var(--color_white);
 }
 
 .footer__link-item {

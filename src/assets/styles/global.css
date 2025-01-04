@@ -63,8 +63,19 @@
 
 html {
     font-family: "KalamehWeb", serif;
+
+    --color_white: white;
     --color_fafbfc: #fafbfc;
     --color_243447: #243447;
+    --color_208BEE: #208BEE;
+    --color_176ab6: #176ab6;
+    --color_232F3D: #232F3D;
+    --color_8593A6: #8593A6;
+    --color_dee2e6: #dee2e6;
+    --color_28394F: #28394F;
+    --color_445161: #445161;
+    --color_DEEAF5: #DEEAF5;
+    --color_CCCCCC: #CCCCCC;
 }
 
 * {
@@ -99,6 +110,12 @@ body {
     flex-direction: column;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*custom css*/
 .panel {
     width: 478px;
     padding: 51px 59px 51px 59px;
@@ -121,11 +138,6 @@ body {
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: var(--color_243447);
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
 }
 
 /*helper classes*/

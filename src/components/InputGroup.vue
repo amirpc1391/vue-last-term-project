@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from 'vue'
+
 defineProps({
   title: {
     type: String,
@@ -22,8 +23,9 @@ const isPlaceHolder = ref('')
 
 <template>
   <div class="input-group">
-    <label class="input-group__label">{{title}}</label>
-    <input :class="['input-group__input',`input-group__input--${variant}`]" :type="typeOfInput" :placeholder="placeholder" @input="(event)=>isPlaceHolder=event.target.value" />
+    <label class="input-group__label">{{ title }}</label>
+    <input :class="['input-group__input',`input-group__input--${variant}`]" :type="typeOfInput"
+           :placeholder="placeholder" @input="(event)=>isPlaceHolder=event.target.value"/>
     <div v-if="isPlaceHolder.length===0" class="input-group__placeholder">مثال</div>
   </div>
 </template>
@@ -36,16 +38,18 @@ const isPlaceHolder = ref('')
   gap: 4px;
   position: relative;
 }
-.input-group__label{
+
+.input-group__label {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #243447;
+  color: var(--color_243447);
 
 }
-.input-group__input{
+
+.input-group__input {
   width: 100%;
   outline: none;
   border: none;
@@ -55,15 +59,17 @@ const isPlaceHolder = ref('')
   box-shadow: 0 2px 0 0 #406080;
   background-color: transparent;
 }
-.input-group__input::placeholder{
-  color: #8593A6;
+
+.input-group__input::placeholder {
+  color: var(--color_8593A6);
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.input-group__placeholder{
+
+.input-group__placeholder {
   display: none;
   position: absolute;
   bottom: 4px;
@@ -74,12 +80,14 @@ const isPlaceHolder = ref('')
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #8593A6;
+  color: var(--color_8593A6);
 }
-.input-group__input--secondary{
+
+.input-group__input--secondary {
   direction: ltr;
 }
-.input-group__input--secondary + .input-group__placeholder{
+
+.input-group__input--secondary + .input-group__placeholder {
   display: block;
 }
 </style>

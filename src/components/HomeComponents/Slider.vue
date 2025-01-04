@@ -73,21 +73,24 @@ import {Navigation} from 'swiper/modules';
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: var(--color_white);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.swiper-pagination-bullet-active{
-  background-color: #fff !important;
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color_white) !important;
 }
-.swiper-button-next,.swiper-button-prev{
-  color: white;
+
+.swiper-button-next, .swiper-button-prev {
+  color: var(--color_white);
 }
+
 .slider__box {
   position: absolute;
-  color: white;
+  color: var(--color_white);
   bottom: 60px;
   left: 0;
   right: 0;
@@ -147,7 +150,7 @@ import {Navigation} from 'swiper/modules';
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #CCCCCC;
+  color: var(--color_CCCCCC);
 
 }
 
@@ -168,7 +171,7 @@ import {Navigation} from 'swiper/modules';
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #CCCCCC;
+  color: var(--color_CCCCCC);
 
 }
 
@@ -185,14 +188,14 @@ import {Navigation} from 'swiper/modules';
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #CCCCCC;
+  color: var(--color_CCCCCC);
 
 }
 
 .slider__dot {
   width: 3px;
   height: 3px;
-  background-color: #CCCCCC;
+  background-color: var(--color_CCCCCC);
   border-radius: 100px;
 }
 
@@ -200,8 +203,8 @@ import {Navigation} from 'swiper/modules';
   padding: 2px 8px 3px 8px;
   gap: 10px;
   border-radius: 4px;
-  background-color: #DEEAF5;
-  color: #208BEE;
+  background-color: var(--color_DEEAF5);
+  color: var(--color_208BEE);
   font-size: 11px;
   font-weight: 600;
   line-height: 18.7px;

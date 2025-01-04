@@ -1,16 +1,16 @@
 <script setup>
 import {RouterLink, RouterView} from 'vue-router'
-import HeaderWeb from '@/components/HeaderWeb.vue'
-import FooterWeb from '@/components/FooterWeb.vue'
-import HomeView from "@/views/HomeView.vue";
-import AuthView from "@/views/AuthView.vue";
+import Notification from "@/components/Notification.vue";
+import {ref} from "vue";
+
+const isActiveNotification = ref(false)
 </script>
 
 <template>
-
-<!--<home-view></home-view>-->
-<!--<auth-view></auth-view>-->
-<RouterView></RouterView>
+  <RouterView></RouterView>
+  <Notification type="danger" :is-active-notification="isActiveNotification">
+    در حال حاضر ارتباط با سرور قطع می‌باشد. لطفا بعدا مجدد تلاش کنید.
+  </Notification>
 </template>
 
 <style scoped>

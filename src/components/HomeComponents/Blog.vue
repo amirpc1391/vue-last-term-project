@@ -69,7 +69,6 @@ defineProps({
 .blog__user-section {
   display: flex;
   gap: 12px;
-  display: flex;
   align-items: center;
 }
 
@@ -91,7 +90,7 @@ defineProps({
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #28394F;
+  color: var(--color_28394F);
 
 }
 
@@ -102,7 +101,7 @@ defineProps({
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #8593A6;
+  color: var(--color_8593A6);
 
 }
 
@@ -119,7 +118,7 @@ defineProps({
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #243447;
+  color: var(--color_243447);
 
 }
 
@@ -130,7 +129,7 @@ defineProps({
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #445161;
+  color: var(--color_445161);
 
 }
 
@@ -147,25 +146,23 @@ defineProps({
   text-align: right;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #8593A6;
+  color: var(--color_8593A6);
 
 }
 
 .blog__dot {
   width: 3px;
   height: 3px;
-  background-color: #8593A6;
+  background-color: var(--color_8593A6);
   border-radius: 100px;
 }
 
 .blog__technology {
-  //width: Hug (55px)px;
-  //height: Hug (24px)px;
   padding: 2px 8px 3px 8px;
   gap: 10px;
   border-radius: 4px;
-  background-color: #DEEAF5;
-  color: #208BEE;
+  background-color: var(--color_DEEAF5);
+  color: var(--color_208BEE);
   font-size: 11px;
   font-weight: 600;
   line-height: 18.7px;

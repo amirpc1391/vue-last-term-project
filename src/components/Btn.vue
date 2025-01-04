@@ -33,7 +33,7 @@ defineProps({
 .button-group--variant-primary {
   background-color: transparent;
   border: 2px solid #24344726;
-  color: #208BEE;
+  color: var(--color_208BEE);
 }
 
 .button-group--variant-primary:hover {
@@ -41,14 +41,14 @@ defineProps({
 }
 
 .button-group--variant-secondary {
-  background-color: #208BEE;
+  background-color: var(--color_208BEE);
   border: none;
-  color: white;
+  color: var(--color_white);
   box-shadow: 0px 8px 16px 0px #20304026;
   padding: 11px 75px;
 }
 
 .button-group--variant-secondary:hover {
-  background-color: #176ab6;
+  background-color: var(--color_176ab6);
 }
 </style>
