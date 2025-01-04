@@ -5,6 +5,7 @@ import AuthView from '../views/AuthView.vue'
 import MainAuth from '../components/AuthComponents/MainAuth.vue'
 import LoginAuth from '../components/AuthComponents/LoginAuth.vue'
 import SignupAuth from '../components/AuthComponents/SignupAuth.vue'
+import LogoutAuth from "@/components/AuthComponents/LogoutAuth.vue";
 
 
 const router = createRouter({
@@ -32,7 +33,13 @@ const router = createRouter({
           path: 'login',
           name: 'login',
           component: LoginAuth,
-        },{
+        },
+        {
+          path: 'logout',
+          name: 'logout',
+          component: LogoutAuth,
+        },
+        {
           path: 'signup',
           name: 'signup',
           component: SignupAuth,
