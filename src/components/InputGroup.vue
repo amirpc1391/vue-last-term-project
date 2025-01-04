@@ -1,31 +1,36 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 
-defineProps({
-  title: {
-    type: String,
-  },
-  placeholder: {
-    type: String
-  },
-  typeOfInput: {
-    type: String,
-    default: 'text'
-  },
-  variant: {
-    type: String,
-    default: 'primary'
-  },
-})
-const isPlaceHolder = ref('')
+defineProps( {
+  title : {
+    type : String ,
+  } ,
+  placeholder : {
+    type : String
+  } ,
+  typeOfInput : {
+    type : String ,
+    default : 'text'
+  } ,
+  variant : {
+    type : String ,
+    default : 'primary'
+  } ,
+} )
+const isPlaceHolder = ref( '' )
+const model = defineModel()
 
 </script>
 
 <template>
   <div class="input-group">
     <label class="input-group__label">{{ title }}</label>
-    <input :class="['input-group__input',`input-group__input--${variant}`]" :type="typeOfInput"
-           :placeholder="placeholder" @input="(event)=>isPlaceHolder=event.target.value"/>
+    <input :class="['input-group__input',`input-group__input--${variant}`]"
+           :type="typeOfInput"
+           :placeholder="placeholder"
+           @input="(event)=>isPlaceHolder=event.target.value"
+           v-model="model"
+    />
     <div v-if="isPlaceHolder.length===0" class="input-group__placeholder">مثال</div>
   </div>
 </template>
