@@ -5,7 +5,7 @@ export const useAuthStore = defineStore( 'auth' , () =>
 {
     const phone = ref( '' )
     const password = ref( '' )
-    const iranianPhoneRegex = /^09\d{9}$/;
+    const iranianPhoneRegex = "/^09\d{9}$/";
     const isAuth = ref( false )
 
     const users = reactive( {
