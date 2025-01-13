@@ -1,19 +1,22 @@
-import { ref , reactive } from 'vue'
-import { defineStore } from 'pinia'
+import {ref, reactive} from 'vue'
+import {defineStore} from 'pinia'
 
-export const useAuthStore = defineStore( 'auth' , () =>
-{
-    const phone = ref( '' )
-    const password = ref( '' )
+export const useAuthStore = defineStore('auth', () => {
+    const phone = ref('')
+    const fullName = ref('')
+    const password = ref('')
     const iranianPhoneRegex = /^09\d{9}$/;
-    const isAuth = ref( false )
+    // const isAuth = ref(false)
 
-    const users = reactive( {
-        "09302431385" : "123"
-    } );
+    const users = reactive({
+        "09302431385": {
+            fullName: "amir",
+            password: "123"
+        }
+    });
 
     function validationPhone() {
-        return iranianPhoneRegex.test( phone.value )
+        return iranianPhoneRegex.test(phone.value)
     }
 
     function checkPhoneExists() {
@@ -23,11 +26,12 @@ export const useAuthStore = defineStore( 'auth' , () =>
     function reset() {
         phone.value = ''
         password.value = ''
+        fullName.value = ''
     }
 
     function addNewUser() {
-        users[ phone.value ] = password.value;
+        users[phone.value] = {fullName: fullName.value, password: password.value};
     }
 
-    return { phone , password , users , isAuth , validationPhone , checkPhoneExists , reset , addNewUser }
-} )
+    return {phone, fullName, password, users, validationPhone, checkPhoneExists, reset, addNewUser}
+})

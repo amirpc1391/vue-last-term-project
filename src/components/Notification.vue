@@ -15,7 +15,7 @@ defineProps({
 
   <div :class="{'notification-section':true, 'notification-section--active':isActiveNotification}">
     <div :class="`notification-section__content notification-section__content--${type}`">
-      <img class="notification-section__img-icon" :src="`src/assets/images/${type}.png`" :alt="type">
+      <img class="notification-section__img-icon" :src="`/src/assets/images/${type}.png`" :alt="type">
       <p class="notification-section__description">
         <slot></slot>
       </p>

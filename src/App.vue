@@ -1,15 +1,16 @@
 <script setup>
 import {RouterLink, RouterView} from 'vue-router'
 import Notification from "@/components/Notification.vue";
-import {ref} from "vue";
+import { useNotificationStore } from "@/stores/notification.js";
 
-const isActiveNotification = ref(false)
+const notificationStore = useNotificationStore()
+
 </script>
 
 <template>
   <RouterView></RouterView>
-  <Notification type="danger" :is-active-notification="isActiveNotification">
-    در حال حاضر ارتباط با سرور قطع می‌باشد. لطفا بعدا مجدد تلاش کنید.
+  <Notification :type="notificationStore.type" :is-active-notification="notificationStore.isActive">
+   {{notificationStore.message}}
   </Notification>
 </template>
 

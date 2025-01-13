@@ -16,7 +16,7 @@ onMounted( () =>
   {
     auth.reset()
     router.push( '/auth' )
-    return;
+    return false;
   }
 
   if ( auth.phone.length === 0 )
@@ -26,7 +26,7 @@ onMounted( () =>
         'danger' ,
         'شماره تماس نمیتواند خالی باشد.'
     )
-    return;
+    return false;
 
   }
 
@@ -37,32 +37,29 @@ onMounted( () =>
         'danger' ,
         'فرمت شماره تماس اشتباه است.'
     )
-    return;
+    return false;
 
   }
 
-  if ( !auth.checkPhoneExists() )
-  {
-
-    router.push( '/auth' )
-
-  }
+  // if ( !auth.checkPhoneExists() )
+  // {
+  //   router.push( '/auth' )
+  // }
 
 } )
 
 const submit = () =>
 {
 
-  let password = auth.users[ auth.phone ]
+  let password = auth.users[ auth.phone ].password
 
   if ( password === auth.password )
   {
-
     notification.showNotification(
         'success' ,
         'ورود با موفقیت انجام شد.'
     )
-    auth.isAuth = true
+    // auth.isAuth = true
     setTimeout( () =>
     {
       router.push( '/' )

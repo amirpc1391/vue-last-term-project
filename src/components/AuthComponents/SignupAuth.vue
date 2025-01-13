@@ -3,48 +3,52 @@
 import Btn from "@/components/Btn.vue";
 import InputGroup from "@/components/InputGroup.vue";
 import router from "@/router/index.js";
-import { useAuthStore } from "@/stores/auth.js";
-import { useNotificationStore } from "@/stores/notification.js";
-import { onMounted } from "vue";
+import {useAuthStore} from "@/stores/auth.js";
+import {useNotificationStore} from "@/stores/notification.js";
+import {onMounted} from "vue";
 
 const auth = useAuthStore()
 const notification = useNotificationStore()
 
-onMounted( () =>
-{
-
+onMounted(() => {
   auth.password = ''
+  auth.fullName = ''
+})
 
-} )
+const submit = () => {
 
-const submit = () =>
-{
-
-  if ( auth.phone.length === 0 || auth.password.length === 0 )
-  {
+  if (auth.phone.length === 0 || auth.password.length === 0 || auth.fullName.length === 0) {
 
     notification.showNotification(
-        'danger' ,
-        'شماره تماس یا رمز عبور نمیتواند خالی باشد.'
+        'danger',
+        'شماره تماس ،نام و نام خانوادگی یا رمز عبور نمیتواند خالی باشد.'
     )
-    return
+    return false;
 
   }
-
-  if ( auth.checkPhoneExists() )
+  if ( !auth.validationPhone() )
   {
 
     notification.showNotification(
         'danger' ,
+        'فرمت شماره تماس اشتباه است.'
+    )
+    return false;
+
+  }
+  if (auth.checkPhoneExists()) {
+
+    notification.showNotification(
+        'danger',
         'با این شماره تماس قبلا یک نفر دیگه ثبت نام کرده است.'
     )
-    return
+    return false;
 
   }
 
   auth.addNewUser()
   auth.reset()
-  router.push( '/auth' )
+  router.push('/auth')
 
 }
 
@@ -65,11 +69,13 @@ const submit = () =>
         v-model="auth.phone"
     />
 
-    <!--    <input-group-->
-    <!--        title="*نام و نام خانوادگی"-->
-    <!--        placeholder="نام خود را به فارسی وارد کنید"-->
-    <!--        type="text"-->
-    <!--        variant="phone"/>-->
+    <input-group
+        title="*نام و نام خانوادگی"
+        placeholder="نام خود را به فارسی وارد کنید"
+        type="text"
+        variant="phone"
+        v-model="auth.fullName"
+    />
 
     <input-group
         title="رمز عبور"

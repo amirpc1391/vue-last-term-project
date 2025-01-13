@@ -3,7 +3,6 @@
 import Btn from "@/components/Btn.vue";
 import InputGroup from "@/components/InputGroup.vue";
 import router from "@/router/index.js";
-import Notification from "@/components/Notification.vue";
 import { useNotificationStore } from "@/stores/notification.js";
 import { useAuthStore } from "@/stores/auth.js";
 import { onMounted } from "vue";
@@ -15,11 +14,11 @@ const auth = useAuthStore()
 onMounted( () =>
 {
 
-  if ( auth.isAuth )
-  {
-    router.push( '/' )
-    return
-  }
+  // if ( auth.isAuth )
+  // {
+  //   router.push( '/' )
+  //   return
+  // }
 
   auth.reset()
 
@@ -35,7 +34,7 @@ const submit = () =>
         'danger' ,
         'شماره تماس نمیتواند خالی باشد.'
     )
-    return;
+    return false;
 
   }
 
@@ -46,7 +45,7 @@ const submit = () =>
         'danger' ,
         'فرمت شماره تماس اشتباه است.'
     )
-    return;
+    return false;
 
   }
 
@@ -54,7 +53,7 @@ const submit = () =>
   {
 
     router.push( 'auth/signup' )
-    return;
+    return false;
 
   }
 
@@ -65,13 +64,6 @@ const submit = () =>
 </script>
 
 <template>
-
-  <notification :is-active-notification="notification.isActive" :type="notification.type">
-
-    {{ notification.message }}
-
-  </notification>
-
   <div class="panel">
     <h1 class="panel__title">ورود / ثبت نام</h1>
     <input-group title="لطفا شماره تلفن همراه خود را وارد کنید." placeholder="۰۹۱۵۱۲۳۴۵۶۷" typeOfInput="text"
