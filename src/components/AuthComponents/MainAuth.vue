@@ -13,15 +13,7 @@ const auth = useAuthStore()
 
 onMounted( () =>
 {
-
-  // if ( auth.isAuth )
-  // {
-  //   router.push( '/' )
-  //   return
-  // }
-
   auth.reset()
-
 } )
 
 const submit = () =>

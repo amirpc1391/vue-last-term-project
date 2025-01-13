@@ -2,79 +2,32 @@
 import Btn from "@/components/Btn.vue";
 import InputGroup from "@/components/InputGroup.vue";
 import router from "@/router/index.js";
-import { useAuthStore } from "@/stores/auth.js";
-import { onMounted } from "vue";
-import { useNotificationStore } from "@/stores/notification.js";
+import {useAuthStore} from "@/stores/auth.js";
+import {useNotificationStore} from "@/stores/notification.js";
 
 const notification = useNotificationStore()
 const auth = useAuthStore()
 
-onMounted( () =>
-{
+const submit = () => {
 
-  if ( !auth.checkPhoneExists() )
-  {
-    auth.reset()
-    router.push( '/auth' )
-    return false;
-  }
+  let password = auth.users[auth.phone].password
 
-  if ( auth.phone.length === 0 )
-  {
-
+  if (password === auth.password) {
     notification.showNotification(
-        'danger' ,
-        'شماره تماس نمیتواند خالی باشد.'
-    )
-    return false;
-
-  }
-
-  if ( !auth.validationPhone() )
-  {
-
-    notification.showNotification(
-        'danger' ,
-        'فرمت شماره تماس اشتباه است.'
-    )
-    return false;
-
-  }
-
-  // if ( !auth.checkPhoneExists() )
-  // {
-  //   router.push( '/auth' )
-  // }
-
-} )
-
-const submit = () =>
-{
-
-  let password = auth.users[ auth.phone ].password
-
-  if ( password === auth.password )
-  {
-    notification.showNotification(
-        'success' ,
+        'success',
         'ورود با موفقیت انجام شد.'
     )
-    // auth.isAuth = true
-    setTimeout( () =>
-    {
-      router.push( '/' )
-    } , 2100 )
+    setTimeout(() => {
+      router.push('/')
+    }, 2100)
 
-  } else
-  {
+  } else {
 
     notification.showNotification(
-        'danger' ,
+        'danger',
         'رمز عبور اشتباه می باشد.'
     )
-
   }
-
 }
 
 </script>
