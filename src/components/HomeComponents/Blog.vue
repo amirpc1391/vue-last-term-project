@@ -1,33 +1,65 @@
 <script setup>
-defineProps({
-  isVertical: {
-    type: Boolean,
-    default: false
+defineProps( {
+  isVertical : {
+    type : Boolean ,
+    default : false
+  } ,
+  img : {
+    type : String ,
+    required : true
+  } ,
+  user : {
+    type : Object ,
+    required : true ,
+    default : {
+      img : "" ,
+      name : ""
+    }
+  } ,
+  date : {
+    type : String ,
+    required : true
+  } ,
+  title : {
+    type : String ,
+    required : true
+  } ,
+  description : {
+    type : String ,
+    required : true
+  } ,
+  time : {
+    type : Number ,
+    required : true ,
+    default : 7
+  } ,
+  category : {
+    type : String ,
+    required : true
   }
-})
+} )
 </script>
 
 <template>
   <div class="blog" :class="{'blog--horizontal':!isVertical}">
     <div v-if="!isVertical" class="blog__section-right">
-      <img class="blog__right-img" src="@/assets/images/blog1.jpg" alt="">
+      <img class="blog__right-img" :src="img" alt="">
     </div>
     <div class="blog__section-left">
       <div class="blog__user-section">
-        <img class="blog__user-img" src="@/assets/images/blog1-user.png" alt="">
+        <img class="blog__user-img" :src="user.img" alt="">
         <div class="blog__user-info">
-          <h4 class="blog__user-title">محمد سبجان سجایی فر</h4>
-          <p class="blog__user-sub-title">۲۸ تير ۱۴۰۰</p>
+          <h4 class="blog__user-title">{{ user.name }}</h4>
+          <p class="blog__user-sub-title">{{ date }}</p>
         </div>
       </div>
-      <img v-if="isVertical" class="blog__left-img" src="@/assets/images/blog1.jpg" alt="">
-      <h3 class="blog__title">طراحی کنترل کننده زیردریایی نظامی در دانشگاه صنعتی شریف تهران</h3>
-      <p class="blog__description">کنترل کننده زیردریایی طراحی شده توسط دانشجویان دانشگاه صنعتی شریف در بین ۱۰ زیردریایی
-        برتر جهان قرار گرفت.</p>
+      <img v-if="isVertical" class="blog__left-img" :src="img" alt="">
+      <h3 class="blog__title">{{ title }}</h3>
+      <p class="blog__description">{{ description }}</p>
       <div class="blog__section">
-        <p class="blog__time">۷ دقیقه مطالعه</p>
+        <p class="blog__time">{{ time }} دقیقه مطالعه</p>
         <div class="blog__dot"></div>
-        <p class="blog__technology">تکنولوژی</p>
+        <p class="blog__technology">{{ category }}</p>
       </div>
     </div>
   </div>

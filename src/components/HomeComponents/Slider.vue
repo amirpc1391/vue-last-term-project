@@ -1,6 +1,6 @@
 <script setup>
 // Import Swiper Vue.js components
-import {Swiper, SwiperSlide} from 'swiper/vue';
+import { Swiper , SwiperSlide } from 'swiper/vue';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -8,58 +8,47 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // import required modules
-import {Pagination} from 'swiper/modules';
-import {Navigation} from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
+
+const props = defineProps( {
+  posts : {
+    required : true ,
+    type : Object
+  }
+} )
+
 </script>
 
 <template>
   <div class="slider">
-    <swiper :pagination="true" :navigation="true" :modules="[Pagination, Navigation]" class="mySwiper">
-      <swiper-slide>
-        <img class="slider__img" src="@/assets/images/slider1.jpg" alt="slider1">
+    <swiper
+        :pagination="true"
+        :navigation="true"
+        :modules="[Pagination, Navigation]"
+        loop
+        effect="fade"
+        class="mySwiper">
+      <swiper-slide v-for="post in props.posts">
+        <img class="slider__img" :src="post.img" alt="slider1">
         <div class="slider__box">
           <div class="slider__user-section">
-            <img class="slider__user-img" src="@/assets/images/blog1-user.png" alt="">
+            <img class="slider__user-img" :src="post.user.img" alt="">
             <div class="slider__user-info">
-              <h4 class="slider__user-title">محمد سبجان سجایی فر</h4>
-              <p class="slider__user-sub-title">۲۸ تير ۱۴۰۰</p>
+              <h4 class="slider__user-title">{{ post.user.name }}</h4>
+              <p class="slider__user-sub-title">{{ post.date }}</p>
             </div>
           </div>
-          <h3 class="slider__title">طراحی کنترل کننده زیردریایی نظامی در دانشگاه صنعتی شریف تهران</h3>
-          <p class="slider__description">کنترل کننده زیردریایی طراحی شده توسط دانشجویان دانشگاه صنعتی شریف در بین ۱۰
-            زیردریایی
-            برتر جهان قرار گرفت.</p>
+          <h3 class="slider__title">{{ post.title }}</h3>
+          <p class="slider__description">{{ post.description }}</p>
           <div class="slider__section">
-            <p class="slider__time">۷ دقیقه مطالعه</p>
+            <p class="slider__time">{{ post.time }} دقیقه مطالعه</p>
             <div class="slider__dot"></div>
-            <p class="slider__technology">تکنولوژی</p>
+            <p class="slider__technology">{{ post.category }}</p>
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide>
-        <img class="slider__img" src="@/assets/images/slider1.jpg" alt="slider1">
-        <div class="slider__box">
-          <div class="slider__user-section">
-            <img class="slider__user-img" src="@/assets/images/blog1-user.png" alt="">
-            <div class="slider__user-info">
-              <h4 class="slider__user-title">محمد سبجان سجایی فر</h4>
-              <p class="slider__user-sub-title">۲۸ تير ۱۴۰۰</p>
-            </div>
-          </div>
-          <h3 class="slider__title">طراحی کنترل کننده زیردریایی نظامی در دانشگاه صنعتی شریف تهران</h3>
-          <p class="slider__description">کنترل کننده زیردریایی طراحی شده توسط دانشجویان دانشگاه صنعتی شریف در بین ۱۰
-            زیردریایی
-            برتر جهان قرار گرفت.</p>
-          <div class="slider__section">
-            <p class="slider__time">۷ دقیقه مطالعه</p>
-            <div class="slider__dot"></div>
-            <p class="slider__technology">تکنولوژی</p>
-          </div>
-        </div>
-      </swiper-slide>
-
     </swiper>
-
   </div>
 </template>
 
